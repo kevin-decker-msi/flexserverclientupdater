@@ -1,4 +1,16 @@
-@echo
+@echo off
+
+ Title Checking Administrative Permissions
+ goto check_Permissions
+ :check_Permissions
+ echo Administrative permissions required. Detecting permissions...
+ net session >nul 2>&1
+ if [%errorLevel%] == [0] (
+ 	echo Success: Administrative permissions confirmed.
+ ) else (
+ 	echo Failure: Current permissions inadequate. Please re-launch this script with a right-click action and select Run As Administrator
+ )
+ pause>nul
 ### This is the Flex Server Client Updater configuration file. Here you will specify what you want the utility to locate & replace within the PC's configuration. It is important to run this utility as an administrator on the PC or it will not update the registry keys for the Mobile client.
 ###
 
