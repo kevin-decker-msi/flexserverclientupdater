@@ -8,7 +8,7 @@
 "fnr.exe" --cl --dir "%ProgramData%\Spillman\Spillman" --fileMask "comdflts.txt" --find "http\://serverIPorHostnamegoeshere\:4080" --replace "https\://NewHostnameGoesHere\:4443"
 "fnr.exe" --cl --dir "%ProgramData%\Spillman\Spillman" --fileMask "comdflts.txt" --find "https\://serverIPorHostnamegoeshere\:4443" --replace "https\://NewHostnameGoesHere\:4443"
 
-## These two lines will do a simple replace on the registry as we are not going to search for the critera just simply replace the values with what we want
+## These two lines will conduct a simple replace on the registry as we are not going to search for the critera just simply replace the values with what we want
 
 reg add HKCU\Software\Spillman\Mobile\Settings /v SpillmanPort /t REG_DWORD /d 4443 /f
 reg add HKCU\Software\Spillman\Mobile\Settings /v HostAddress /t REG_SZ /d NewHostnameGoesHere /f
